@@ -14,8 +14,8 @@ public class App {
         int stock = 100;
 
         logger.info("=== Sunny Pharm ===");
-        logger.info("Medicine : " + medicine);
-        logger.info("Price    : ₹" + price);
-        logger.info("Stock    : " + stock);
+        logger.info(String.format("Medicine : %s", medicine));
+        logger.info(String.format("Price    : ₹%d", price));
+        logger.info(String.format("Stock    : %d", stock));
     }
 }
