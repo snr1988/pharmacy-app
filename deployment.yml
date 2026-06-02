@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: pharmacy-app
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: pharmacy-app
+
+  template:
+    metadata:
+      labels:
+        app: pharmacy-app
+
+    spec:
+      containers:
+        - name: pharmacy-app
+          image: snr1988/pharmacy-app:23
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8081
